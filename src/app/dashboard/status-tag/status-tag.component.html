@@ -1,0 +1,3 @@
+<ion-badge color="danger" *ngIf="status === 'In Progress'">{{ status }}</ion-badge>
+<ion-badge color="warning" *ngIf="status === 'Covered Person'">{{ status }}</ion-badge>
+<ion-badge color="dark" *ngIf="status !== 'In Progress' && status !== 'Covered Person' ">{{ status }}</ion-badge>

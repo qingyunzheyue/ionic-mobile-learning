@@ -1,0 +1,36 @@
+<ion-content>
+  <ion-icon name="settings-outline" size="large" class="ion-padding"></ion-icon>
+  <ion-grid class="ion-margin-end">
+
+    <ion-col>
+      <div class="ion-text-center" >
+        <h3 class="text-yellow">SSO Placeholder (If expired)</h3>
+      </div>
+    </ion-col> 
+
+    <ion-col>
+      <div class="ion-text-center">
+        <h2>GIMS Mobile</h2>
+      </div>
+    </ion-col>  
+
+    <ion-col>
+        <ion-item>
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-input clearInput=true type="text" [(ngModel)]="user.username"></ion-input>
+        </ion-item>
+    </ion-col> 
+
+    <ion-col>
+      <ion-item>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input clearInput=true type="password" [(ngModel)]="user.password"></ion-input>
+      </ion-item>
+     </ion-col> 
+
+     <ion-col>
+      <ion-button expand="full" shape="round" (click)="login()">Login</ion-button>
+     </ion-col> 
+
+  </ion-grid>
+</ion-content>

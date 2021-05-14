@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <h3 class="ion-margin-start">Dashboard</h3> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <ion-card-header>
+        <h4>
+          <ion-icon name="document-outline"></ion-icon> Outstanding Profile Actions
+        </h4>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list *ngFor="let outstandingProfileAction of outstandingProfileActions">
+          <ion-row>
+            <ion-col size="6">
+              <h3> {{ outstandingProfileAction.category }} </h3>
+              <div> Expires: {{ outstandingProfileAction.actionRequiredBy }} </div>
+            </ion-col>
+            <ion-col>
+              <app-status-tag [status]="outstandingProfileAction.status"></app-status-tag>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <h4>
+        <ion-icon name="document-outline"></ion-icon> Outstanding Exceptions
+      </h4>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let outstandingException of outstandingExceptions">
+        <ion-row>
+          <ion-col size="6">
+            <h3> {{ outstandingException.holdingName }} </h3>
+            <div> Expires: {{ outstandingException.actionRequiredBy }} </div>
+          </ion-col>
+          <ion-col>
+            <app-status-tag [status]="outstandingException.status"></app-status-tag>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <h4>
+      <ion-icon name="document-outline"></ion-icon> Brokerage Account
+    </h4>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list *ngFor="let brokerageAccount of brokerageAccount">
+      <ion-row>
+        <ion-col size="6">
+          <h3> {{ brokerageAccount.accountName }} </h3>
+          <div> Expires: {{ brokerageAccount.accountNumber }} </div>
+        </ion-col>
+        <ion-col>
+         <app-status-tag [status]="brokerageAccount.status"></app-status-tag>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+  
+</ion-content>
