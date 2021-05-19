@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { FunctionalityKeys } from '../common/function/function.constant';
 import { DashboardAPIService } from './dashboard-api.service';
 import { BrokerageAccount, OutstandingExceptions, OutstandingProfileActions } from './interface/dashboard-data';
 
@@ -18,8 +19,11 @@ export class DashboardPage implements OnInit, OnDestroy {
 
   public brokerageAccount: BrokerageAccount[];
   
+  readonly FunctionalityKeys = FunctionalityKeys;
 
-  constructor(private readonly apiService : DashboardAPIService) { }
+  constructor(private readonly apiService : DashboardAPIService) {
+    
+   }
   
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

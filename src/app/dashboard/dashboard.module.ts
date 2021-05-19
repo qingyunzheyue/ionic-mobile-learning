@@ -8,13 +8,15 @@ import { DashboardPageRoutingModule } from './dashboard-routing.module';
 
 import { DashboardPage } from './dashboard.page';
 import { StatusTagComponent } from './status-tag/status-tag.component';
+import { MyCommonModule } from '../common/mycommon.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DashboardPageRoutingModule
+    DashboardPageRoutingModule,
+    MyCommonModule
   ],
   declarations: [DashboardPage,StatusTagComponent]
 

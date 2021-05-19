@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { RequiredFunctionalityDirective } from './directive/required-functionality.directive';
+import { FunctionalityKeys } from './function/function.constant';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    RequiredFunctionalityDirective
+  ],
   imports: [
-    CommonModule,
-    HttpClient
-  ]
+    CommonModule
+  ],
+  exports: [RequiredFunctionalityDirective]
 })
 export class MyCommonModule {
   
